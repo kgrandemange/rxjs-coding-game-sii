@@ -1,0 +1,24 @@
+{
+  "name": "siigame-ai",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "license": "MIT",
+  "scripts": {
+    "start:vgo": "DEBUG=*,-Fight::getGame node ./src/app.js --ai=vgo --player-name=IngeDev2016 --character=paladin",
+    "start:kgr": "DEBUG=*,-Fight::getGame node ./src/app.js --ai=kgr --player-name=SwaggyPaladin --character=paladin",
+    "start:only-hit": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-hit --player-name=OnlyHit --character=warrior",
+    "start:only-thrust": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-thrust --player-name=OnlyThrust --character=warrior",
+    "start:only-shield": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-shield --player-name=OnlyShield --character=warrior"
+  },
+  "dependencies": {
+    "@akanass/rx-http-request": "^2.1.1",
+    "debug": "^2.6.3",
+    "rxjs": "^5.2.0",
+    "yargs": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/debug": "^0.0.29",
+    "@types/node": "^7.0.12",
+    "typescript": "^2.2.2"
+  }
+}
