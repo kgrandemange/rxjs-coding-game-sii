@@ -4,8 +4,6 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "start:vgo": "DEBUG=*,-Fight::getGame node ./src/app.js --ai=vgo --player-name=IngeDev2016 --character=paladin",
-    "start:kgr": "DEBUG=*,-Fight::getGame node ./src/app.js --ai=kgr --player-name=SwaggyPaladin --character=paladin",
     "start:only-hit": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-hit --player-name=OnlyHit --character=warrior",
     "start:only-thrust": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-thrust --player-name=OnlyThrust --character=warrior",
     "start:only-shield": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-shield --player-name=OnlyShield --character=warrior"

@@ -3,8 +3,6 @@ import * as debug from 'debug';
 import { AI } from './ai';
 import { Game } from './game';
 import { Manager } from './manager';
-import { VgoAI } from '../ai/vgo';
-import { KgrAI } from '../ai/kgr';
 import { OnlyHitAI } from '../ai/onlyHit';
 import { OnlyThrustAI } from '../ai/onlyThrust';
 import { OnlyShieldAI } from '../ai/onlyShield';
