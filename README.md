@@ -6,9 +6,9 @@ An tool, create with [RxJS](https://github.com/Reactive-Extensions/RxJS), to hel
 
 `npm install` or `yarn`
 
-## Add your own AI
+## Create your own AI
 
-Create your AI into `src/ai/` folder :
+Create your AI in `src/ai/` folder:
 
 ```typescript
 import { AI } from "../shared/ai";
@@ -28,7 +28,7 @@ export class yourAI extends AI {
 }
 ```
 
-Then add your AI into the factory `shared/ai.factory.ts`.
+Then add your AI in the factory `shared/ai.factory.ts`.
 
 You can run your IA with the above command :
 
@@ -43,7 +43,7 @@ You can run a preconfigured AI to help you to test you AI
 ### OnlyHit
  
 ```bash
-npm run-script start:only-hit 
+npm run-script start:only-hit --versus=true
 ```
 
 ### OnlyThrust
@@ -51,7 +51,7 @@ npm run-script start:only-hit
 This AI use THRUST action until the enemy has 0 of armor. Then it use only the HIT action.
 
 ```bash
-npm run-script start:only-thrust
+npm run-script start:only-thrust --versus=true
 ```
 
 ### OnlyShield
@@ -59,5 +59,40 @@ npm run-script start:only-thrust
 This AI use SHIELD and wait your aciton.
 
 ```bash
-npm run-script start:only-shield
+npm run-script start:only-shield --versus=true
 ```
+
+# How to use
+
+For example, we want to launch a game with OnlyShield versus OnlyThrust:
+
+In you first shell run :
+
+```bash
+npm run-script start:only-thrust
+```
+
+Then the result is something like that:
+
+```
+Fight::createGame { token: 'cpvmm2',
+Fight::createGame   status: 'WAITING',
+Fight::createGame   speed: 1000,
+Fight::createGame   countDown: null,
+Fight::createGame   me: null,
+Fight::createGame   foe: 
+Fight::createGame    { healthPoints: 1000,
+Fight::createGame      armor: 17,
+Fight::createGame      character: { armor: 17, name: 'WARRIOR', actions: [Object] },
+Fight::createGame      history: [],
+Fight::createGame      isBehindShield: false } } +0ms
+```
+
+Then you can run in another shell:
+
+```bash
+DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-shield --player-name=OnlyShield --character=warrior --versus=true --game-token=<token>
+```
+
+With `--gameToken` equal to the token in the previous command
+
