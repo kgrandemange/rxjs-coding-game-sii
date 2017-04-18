@@ -4,7 +4,7 @@ import { CharacterAction, Game } from "../shared/game";
 export class OnlyShieldAI extends AI {
 
   firstAction (game: Game): void {
-    this.manager.performActionAndWait(CharacterAction.SHIELD, 600);
+    this.manager.performAction(CharacterAction.SHIELD);
   }
 
   ai (game: Game): void {

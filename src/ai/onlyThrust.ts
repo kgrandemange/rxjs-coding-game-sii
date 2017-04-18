@@ -4,7 +4,7 @@ import { CharacterAction, Game } from "../shared/game";
 export class OnlyThrustAI extends AI {
 
   firstAction (game: Game): void {
-    this.manager.performActionAndWait(CharacterAction.THRUST, 600);
+    this.manager.performAction(CharacterAction.THRUST);
   }
 
   ai (game: Game): void {
