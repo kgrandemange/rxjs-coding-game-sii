@@ -1,7 +1,7 @@
 import { AI } from "../shared/ai";
 import { CharacterAction, Game } from "../shared/game";
 
-export class OnlyThrustAI extends AI {
+export default class OnlyThrustAI extends AI {
 
   firstAction (game: Game): void {
     this.manager.performActionAndWait(CharacterAction.THRUST, 600);

@@ -3,9 +3,6 @@ import * as debug from 'debug';
 import { AI } from './ai';
 import { Game } from './game';
 import { Manager } from './manager';
-import { OnlyHitAI } from '../ai/onlyHit';
-import { OnlyThrustAI } from '../ai/onlyThrust';
-import { OnlyShieldAI } from '../ai/onlyShield';
 
 export class AIFactory {
 
@@ -14,16 +11,11 @@ export class AIFactory {
 
     debug('ai')(`Using '${name}' AI`);
 
-    switch (name) {
-      case 'only-hit':
-        return new OnlyHitAI(manager);
-      case 'only-thrust':
-        return new OnlyThrustAI(manager);
-      case 'only-shield':
-        return new OnlyShieldAI(manager);
-
-      default:
-        throw new Error(`AI '${name}' not found. Add it in src/shared/ai.factory.ts`);
+    try {
+      const AiClass = require(`../ai/${name}`);
+      return new AiClass.default(manager);
+    } catch(e) {
+      throw new Error(`AI '${name}' not found. Add it in src/ai/ folder. Make sure to export default`);
     }
   }
 

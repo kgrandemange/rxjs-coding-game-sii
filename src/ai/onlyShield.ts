@@ -1,7 +1,7 @@
 import { AI } from "../shared/ai";
 import { CharacterAction, Game } from "../shared/game";
 
-export class OnlyShieldAI extends AI {
+export default class OnlyShieldAI extends AI {
 
   firstAction (game: Game): void {
     this.manager.performActionAndWait(CharacterAction.SHIELD, 600);

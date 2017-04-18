@@ -10,13 +10,13 @@ Then you can run `npm watch` to compile your ts files.
 
 ## Create your own AI
 
-Create your AI in `src/ai/` folder:
+Create your AI in `src/ai/` folder as yourAI.ts
 
 ```typescript
 import { AI } from "../shared/ai";
 import { CharacterAction, Game } from "../shared/game";
 
-export class yourAI extends AI {
+export default class yourAI extends AI {
 
   firstAction (game: Game): void {
     // Put your first action here
@@ -30,12 +30,10 @@ export class yourAI extends AI {
 }
 ```
 
-Then add your AI in the factory `shared/ai.factory.ts`.
-
 You can run your IA with the above command :
 
 ```bash
-DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=your-ai --player-name=your-name --character=warrior
+DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=yourAI --player-name=your-name --character=warrior
 ```
 
 ## Preconfigured AI

@@ -4,9 +4,9 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "start:only-hit": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-hit --player-name=OnlyHit --character=warrior --versus=true",
-    "start:only-thrust": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-thrust --player-name=OnlyThrust --character=warrior --versus=true",
-    "start:only-shield": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=only-shield --player-name=OnlyShield --character=warrior --versus=true",
+    "start:only-hit": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=onlyHit --player-name=OnlyHit --character=warrior --versus=true",
+    "start:only-thrust": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=onlyThrust --player-name=OnlyThrust --character=warrior --versus=true",
+    "start:only-shield": "DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=onlyShield --player-name=OnlyShield --character=warrior --versus=true",
     "watch": "tsc -w"
   },
   "dependencies": {
