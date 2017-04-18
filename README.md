@@ -6,7 +6,7 @@ An tool, create with [RxJS](https://github.com/Reactive-Extensions/RxJS), to hel
 
 `npm install` or `yarn`
 
-Then you can run `npm watch` to compile your ts files.
+Then you can run `npm run watch` to compile your ts files.
 
 ## Create your own AI
 
