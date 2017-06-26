@@ -21,7 +21,7 @@ export class Manager {
     Fight.performAction(this.game.token, this.playerKey, action)
       .delay(delay)
       .flatMap(() => Fight.getGame(this.game.token, this.playerKey)) // It seems to take too much time once in a while ...
-      .subscribe((game) => {
+      .subscribe((game: Game) => {
         this.history.push({
           coolDown   : CharacterActionCooldown.get(action),
           description: '',
