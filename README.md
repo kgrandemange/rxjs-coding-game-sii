@@ -38,7 +38,7 @@ DEBUG=*,-Fight::getGamenode node ./src/app.js --ai=yourAI --player-name=your-nam
 
 ## Preconfigured AI
 
-You can run a preconfigured AI to help you to test you AI
+You can run a preconfigured AI to help you to test your AI
 
 ### OnlyHit
  
