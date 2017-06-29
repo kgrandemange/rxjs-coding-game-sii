@@ -1,6 +1,6 @@
 # SIIGAME-AI
 
-A tool, create with [RxJS](https://github.com/Reactive-Extensions/RxJS), to help to use the [Coding Game](https://coding-game.swat-sii.fr)
+A tool creates with [RxJS](https://github.com/Reactive-Extensions/RxJS), to help to use the [Coding Game](https://coding-game.swat-sii.fr)
 
 ## How to install
 
